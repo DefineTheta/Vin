@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Vin\Log.h" />
     <ClInclude Include="src\Vin.h" />
     <ClInclude Include="src\Vin\Application.h" />
     <ClInclude Include="src\Vin\Core.h" />
     <ClInclude Include="src\Vin\Entrypoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Vin\Log.cpp" />
     <ClCompile Include="src\Vin\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -65,7 +67,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>VIN_PLATFORM_WINDOWS;VIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VIN_CONFIGURATION_DEBUG;VIN_PLATFORM_WINDOWS;VIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vin\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -79,7 +82,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <PreprocessorDefinitions>VIN_PLATFORM_WINDOWS;VIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>VIN_CONFIGURATION_DEBUG;VIN_PLATFORM_WINDOWS;VIN_BUILD_DLL;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Vin\vendor\spdlog\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
